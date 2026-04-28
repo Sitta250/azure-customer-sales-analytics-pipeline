@@ -1,0 +1,15 @@
+{
+	"name": "intech-df30",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "germanywestcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "27a125da-8675-49c0-bb09-0fb7982214d6",
+		"tenantId": "f78e973e-5c0b-4ab8-bbd7-9887c95a8ebd"
+	}
+}
