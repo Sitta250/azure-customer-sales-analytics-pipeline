@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "intech-synapse30"
+		},
+		"AzureDataLakeStorageLink_accountKey": {
+			"value": ""
+		},
+		"SqlServerOnPremLinkedService_password": {
+			"value": ""
+		},
+		"intech-synapse30-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:intech-synapse30.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://intechsg30.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorageLink_properties_typeProperties_url": {
+			"value": "https://intechsg30.dfs.core.windows.net/"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://intech-keyvault30.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "intech-synapse30-ondemand.sql.azuresynapse.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "gold_db30"
+		},
+		"AzureSqlLinkedService_properties_typeProperties_server": {
+			"value": "azure-db30.database.windows.net"
+		},
+		"AzureSqlLinkedService_properties_typeProperties_database": {
+			"value": "azure-db"
+		},
+		"AzureSqlLinkedService_properties_typeProperties_userName": {
+			"value": "username"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_server": {
+			"value": "intech-synapse30-ondemand.sql.azuresynapse.net"
+		},
+		"AzureSynapseAnalytics_properties_typeProperties_database": {
+			"value": "gold_db30"
+		},
+		"SqlServerOnPremLinkedService_properties_typeProperties_server": {
+			"value": "azure-db30.database.windows.net"
+		},
+		"SqlServerOnPremLinkedService_properties_typeProperties_database": {
+			"value": "azure-db"
+		},
+		"SqlServerOnPremLinkedService_properties_typeProperties_userName": {
+			"value": "username"
+		},
+		"intech-synapse30-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://intechsg30.dfs.core.windows.net"
+		}
+	}
+}
