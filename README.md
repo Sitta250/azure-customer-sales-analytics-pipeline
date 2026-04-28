@@ -1,7 +1,7 @@
 # Azure End-to-End Data Engineering Pipeline
 ### Customer Demographics & Sales Analytics
 
-![Architecture](images/architecture.pdf)
+![Architecture](images/architecture.png)
 
 > A production-grade data pipeline built on Azure that ingests raw sales and customer data, transforms it through a Medallion architecture, and delivers interactive KPI dashboards to business stakeholders — refreshed daily with zero manual intervention.
 
@@ -21,7 +21,7 @@ This project delivers that solution through a fully automated, end-to-end Azure 
 
 ## Architecture Overview
 
-![Pipeline Architecture](images/architecture.pdf)
+![Pipeline Architecture](images/architecture.png)
 
 The solution follows the **Medallion Architecture** (Bronze → Silver → Gold), a modern lakehouse pattern that ensures data quality, traceability, and performance at each layer.
 
@@ -39,7 +39,7 @@ The solution follows the **Medallion Architecture** (Bronze → Silver → Gold)
 ## Pipeline Walkthrough
 
 ### 1. Ingestion — Azure Data Factory
-![ADF Pipeline](images/adf_pipeline.pdf)
+![ADF Pipeline](images/adf_pipeline.png)
 
 - A **Self-Hosted Integration Runtime** connects ADF to the on-premises SQL Server (AdventureWorksLT2022)
 - A **Lookup activity** dynamically fetches all table names from the source schema
@@ -66,7 +66,7 @@ Two notebooks handle the layer-to-layer transformations:
 
 ### 4. Visualisation — Power BI
 
-![Power BI Dashboard](images/powerbi_dashboard.pdf)
+![Power BI Dashboard](images/powerbi_dashboard.png)
 
 The dashboard connects directly to Synapse Serverless and surfaces the following KPIs:
 
