@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "SELECT TOP 10 *\nFROM OPENROWSET(\n    BULK 'https://intechsg30.dfs.core.windows.net/gold/SalesLT/Address/',\n    FORMAT = 'DELTA'\n) AS [result];",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db30",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

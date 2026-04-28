@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword123!'\nGO\n\nCREATE DATABASE SCOPED CREDENTIAL [managed_identity]\nWITH IDENTITY = 'Managed Identity'\nGO\n\nCREATE EXTERNAL DATA SOURCE gold_storage\nWITH (\n    LOCATION = 'https://intechsg.dfs.core.windows.net/gold',\n    CREDENTIAL = [managed_identity]\n);\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "gold_db30",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
