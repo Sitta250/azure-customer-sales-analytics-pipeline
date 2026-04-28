@@ -39,6 +39,7 @@ The solution follows the **Medallion Architecture** (Bronze → Silver → Gold)
 ## Pipeline Walkthrough
 
 ### 1. Ingestion — Azure Data Factory
+
 ![ADF Pipeline](images/adf_pipeline.png)
 
 - A **Self-Hosted Integration Runtime** connects ADF to the on-premises SQL Server (AdventureWorksLT2022)
@@ -75,6 +76,17 @@ The dashboard connects directly to Synapse Serverless and surfaces the following
 - **Gender Split** — donut chart showing male vs. female customer distribution
 - **Filters** — slicers for Product Category and Customer Title (gender proxy)
 
+#### Data Model — Table Relationships
+
+![Table Relationships](images/relationships.png)
+
+The Power BI semantic model reflects the AdventureWorksLT schema with the following key relationships:
+
+- `CustomerAddress` bridges `Customer`, `Address`, and `SalesOrderHeader`
+- `SalesOrderDetail` links to both `Product` and `SalesOrderHeader`
+- `Product` connects to `ProductCategory` and `ProductModel`
+- All relationships are active and follow standard star/snowflake schema patterns
+
 ---
 
 ## Tech Stack
@@ -106,6 +118,10 @@ The dashboard connects directly to Synapse Serverless and surfaces the following
 ```
 azure-customer-sales-analytics-pipeline/
 ├── images/                         # Architecture and dashboard screenshots
+│   ├── architecture.png
+│   ├── adf_pipeline.png
+│   ├── powerbi_dashboard.png
+│   └── relationships.png
 ├── databricks_notebook/
 │   ├── bronze to silver.ipynb      # Bronze → Silver transformation
 │   ├── silver to gold.ipynb        # Silver → Gold transformation
